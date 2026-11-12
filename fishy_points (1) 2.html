@@ -1,0 +1,1690 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, viewport-fit=cover">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+    <meta name="apple-mobile-web-app-title" content="Fishy Points">
+    <title>Teacher Rosy's Fishy Points 🐠</title>
+    <!-- Tailwind CSS CDN -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Fredoka:wght@400;600;700&family=Quicksand:wght@500;700&display=swap" rel="stylesheet">
+    
+    <style>
+        body {
+            font-family: 'Fredoka', 'Quicksand', sans-serif;
+            user-select: none;
+            -webkit-user-select: none;
+            -webkit-touch-callout: none;
+            touch-action: manipulation;
+            overflow-x: hidden;
+            min-height: 100dvh;
+            padding-top: env(safe-area-inset-top);
+            padding-bottom: env(safe-area-inset-bottom);
+            padding-left: env(safe-area-inset-left);
+            padding-right: env(safe-area-inset-right);
+        }
+
+        button, label, a {
+            touch-action: manipulation;
+            -webkit-tap-highlight-color: transparent;
+        }
+        /* Allow full text selection and editing inside inputs (16px+ prevents iPhone Safari auto-zoom) */
+        input, textarea {
+            user-select: text !important;
+            -webkit-user-select: text !important;
+            font-size: 16px;
+        }
+
+        /* Aquarium Water Styling with 3D Pastel Coral Reef Scene */
+        .aquarium-bg {
+            background-color: #38bdf8;
+            background-image: 
+                url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 1200 750' preserveAspectRatio='none'><defs><linearGradient id='skyWater' x1='0' y1='0' x2='0' y2='1'><stop offset='0%' stop-color='%237ce8f5'/><stop offset='35%' stop-color='%233fd0e8'/><stop offset='65%' stop-color='%23169bc7'/><stop offset='100%' stop-color='%230e7490'/></linearGradient><linearGradient id='sandFloor' x1='0' y1='0' x2='0' y2='1'><stop offset='0%' stop-color='%23fef0d5'/><stop offset='50%' stop-color='%23f7d8b5'/><stop offset='100%' stop-color='%23e7be93'/></linearGradient><linearGradient id='tallPink' x1='0' y1='1' x2='0' y2='0'><stop offset='0%' stop-color='%23f492b7'/><stop offset='60%' stop-color='%23fbcfe8'/><stop offset='100%' stop-color='%23ffffff'/></linearGradient><linearGradient id='hotPink' x1='0' y1='1' x2='0' y2='0'><stop offset='0%' stop-color='%23db2777'/><stop offset='65%' stop-color='%23f472b6'/><stop offset='100%' stop-color='%23fbcfe8'/></linearGradient><linearGradient id='peachCoral' x1='0' y1='0' x2='0' y2='1'><stop offset='0%' stop-color='%23fed7aa'/><stop offset='100%' stop-color='%23e08e79'/></linearGradient><linearGradient id='purpleRock' x1='0' y1='0' x2='0' y2='1'><stop offset='0%' stop-color='%239370db'/><stop offset='100%' stop-color='%235b3e96'/></linearGradient><linearGradient id='blueCoral' x1='0' y1='1' x2='0' y2='0'><stop offset='0%' stop-color='%234338ca'/><stop offset='100%' stop-color='%23818cf8'/></linearGradient><radialGradient id='bubbleGrad' cx='35%' cy='35%' r='65%'><stop offset='0%' stop-color='%23ffffff' stop-opacity='0.95'/><stop offset='60%' stop-color='%23ffffff' stop-opacity='0.25'/><stop offset='100%' stop-color='%23ffffff' stop-opacity='0.6'/></radialGradient></defs><rect width='1200' height='750' fill='url(%23skyWater)'/><path d='M0 160 Q300 220 600 185 T1200 150 L1200 230 Q900 260 600 225 T0 200 Z' fill='%23ffffff' opacity='0.18'/><path d='M0 240 Q350 280 700 245 T1200 220 L1200 270 Q850 295 500 265 T0 260 Z' fill='%23ffffff' opacity='0.12'/><path d='M0 575 Q300 620 600 595 T1200 560 L1200 750 L0 750 Z' fill='url(%23sandFloor)'/><path d='M450 615 Q600 595 760 615 Q620 645 450 615 Z' fill='%23ffffff' opacity='0.35'/><g stroke-linecap='round' fill='none'><path d='M95 570 C85 450 75 310 100 175 M88 380 C65 340 58 290 65 245 M96 310 C118 275 125 230 120 190' stroke='url(%23tallPink)' stroke-width='15'/><path d='M150 575 C140 430 135 280 158 150 M144 350 C125 310 122 260 130 220 M152 280 C172 245 178 200 174 165' stroke='url(%23tallPink)' stroke-width='16'/><path d='M205 580 C198 460 195 340 212 225 M202 400 C185 365 182 325 188 290' stroke='url(%23tallPink)' stroke-width='13'/><path d='M280 585 C270 480 262 385 282 295 M272 445 C252 415 248 375 254 345 M278 395 C298 365 305 330 300 300' stroke='url(%23hotPink)' stroke-width='14'/><path d='M345 585 C340 500 335 425 352 355 M342 465 C325 440 322 410 328 385' stroke='url(%23tallPink)' stroke-width='11'/><path d='M470 570 C465 480 462 395 482 315 M468 445 C450 415 446 380 452 350 M476 390 C495 365 500 335 496 310' stroke='%23ffffff' stroke-width='9' opacity='0.85'/></g><ellipse cx='145' cy='585' rx='155' ry='55' fill='url(%23purpleRock)'/><ellipse cx='265' cy='595' rx='120' ry='42' fill='url(%23purpleRock)'/><g stroke-linecap='round' fill='none'><path d='M75 635 C55 565 38 505 58 445 M56 545 C35 515 28 480 35 450 M62 505 C80 480 85 450 82 425' stroke='url(%23blueCoral)' stroke-width='12'/><path d='M115 635 C105 570 98 515 115 460 M106 545 C90 520 88 490 94 465' stroke='url(%23blueCoral)' stroke-width='11'/></g><ellipse cx='290' cy='575' rx='75' ry='42' fill='%23fdba74'/><ellipse cx='275' cy='585' rx='65' ry='35' fill='%23f9a8d4'/><ellipse cx='420' cy='585' rx='55' ry='28' fill='%23fda4af'/><path d='M110 660 C95 615 145 595 190 610 C235 595 275 620 260 665 C225 695 145 695 110 660 Z' fill='url(%23peachCoral)'/><ellipse cx='185' cy='622' rx='35' ry='14' fill='%23b46555'/><g stroke-linecap='round' fill='none'><path d='M1065 560 C1055 420 1050 265 1075 115 M1060 340 C1038 295 1032 245 1040 195 M1068 250 C1090 210 1098 165 1092 125' stroke='url(%23tallPink)' stroke-width='17'/><path d='M1125 565 C1118 405 1115 245 1138 95 M1120 310 C1100 265 1095 215 1102 170' stroke='url(%23tallPink)' stroke-width='16'/><path d='M1170 570 C1165 440 1162 315 1182 195' stroke='url(%23tallPink)' stroke-width='14'/></g><ellipse cx='1030' cy='575' rx='175' ry='65' fill='url(%23purpleRock)'/><ellipse cx='885' cy='595' rx='110' ry='45' fill='url(%23purpleRock)'/><g stroke-linecap='round' fill='none'><path d='M780 575 C768 510 760 450 778 395 M768 485 C750 455 745 425 752 400 M774 445 C792 420 798 390 794 365' stroke='url(%23blueCoral)' stroke-width='11'/></g><g stroke-linecap='round' fill='none'><path d='M855 605 C842 530 835 465 852 405 M885 605 C878 520 875 445 892 385 M915 605 C912 530 912 460 928 400 M942 605 C945 540 948 480 962 430' stroke='url(%23hotPink)' stroke-width='13'/></g><ellipse cx='1035' cy='520' rx='75' ry='48' fill='url(%23peachCoral)'/><ellipse cx='1035' cy='505' rx='35' ry='15' fill='%23b46555'/><ellipse cx='955' cy='635' rx='48' ry='28' fill='url(%23peachCoral)'/><ellipse cx='955' cy='625' rx='22' ry='9' fill='%23b46555'/><circle cx='545' cy='615' r='18' fill='%23facc15'/><circle cx='625' cy='628' r='16' fill='%23f472b6'/><circle cx='815' cy='638' r='14' fill='%23facc15'/><circle cx='550' cy='320' r='6' fill='url(%23bubbleGrad)'/><circle cx='585' cy='275' r='9' fill='url(%23bubbleGrad)'/><circle cx='615' cy='355' r='7' fill='url(%23bubbleGrad)'/><circle cx='645' cy='295' r='5' fill='url(%23bubbleGrad)'/><circle cx='530' cy='410' r='8' fill='url(%23bubbleGrad)'/><circle cx='675' cy='380' r='10' fill='url(%23bubbleGrad)'/><circle cx='710' cy='260' r='6' fill='url(%23bubbleGrad)'/><circle cx='595' cy='445' r='7' fill='url(%23bubbleGrad)'/><circle cx='655' cy='465' r='6' fill='url(%23bubbleGrad)'/><circle cx='730' cy='335' r='8' fill='url(%23bubbleGrad)'/></svg>");
+            background-size: cover;
+            background-position: center bottom;
+            background-repeat: no-repeat;
+            position: relative;
+            overflow: hidden;
+        }
+
+        /* Underwater Sunlight Rays */
+        .light-ray {
+            position: absolute;
+            top: 0;
+            width: 70px;
+            height: 100%;
+            background: linear-gradient(180deg, rgba(255, 255, 255, 0.35) 0%, rgba(255, 255, 255, 0) 80%);
+            transform: rotate(-15deg);
+            transform-origin: top left;
+            pointer-events: none;
+            animation: rayShimmer 4s ease-in-out infinite alternate;
+        }
+
+        @keyframes rayShimmer {
+            0% { opacity: 0.3; transform: rotate(-15deg) scaleX(1); }
+            100% { opacity: 0.7; transform: rotate(-12deg) scaleX(1.3); }
+        }
+
+        /* Ambient Floating Bubbles */
+        .bg-bubble {
+            position: absolute;
+            background: radial-gradient(circle at 30% 30%, rgba(255, 255, 255, 0.8), rgba(255, 255, 255, 0.1));
+            border: 1px solid rgba(255, 255, 255, 0.6);
+            border-radius: 50%;
+            pointer-events: none;
+            animation: floatBubble 8s linear infinite;
+            bottom: -30px;
+        }
+
+        @keyframes floatBubble {
+            0% { transform: translateY(0) translateX(0); opacity: 0; }
+            10% { opacity: 0.8; }
+            90% { opacity: 0.8; }
+            100% { transform: translateY(-110vh) translateX(40px); opacity: 0; }
+        }
+
+        /* Fish Element Smooth Movement */
+        .fish-wrapper {
+            position: absolute;
+            transition: transform 0.08s linear, width 0.4s ease-out, height 0.4s ease-out;
+            cursor: pointer;
+            z-index: 20;
+            will-change: transform;
+            touch-action: manipulation;
+            -webkit-tap-highlight-color: transparent;
+        }
+
+        .fish-wrapper:active {
+            transform: scale(0.95);
+        }
+
+        /* Legendary Rainbow Aura */
+        .legendary-rainbow-aura {
+            filter: drop-shadow(0 0 12px rgba(255, 255, 255, 0.9)) drop-shadow(0 0 25px rgba(255, 0, 200, 0.8));
+            animation: auraPulse 2s ease-in-out infinite alternate;
+        }
+
+        @keyframes auraPulse {
+            0% { filter: drop-shadow(0 0 10px rgba(255, 215, 0, 0.9)) drop-shadow(0 0 20px rgba(255, 0, 128, 0.8)); }
+            100% { filter: drop-shadow(0 0 20px rgba(0, 255, 255, 1)) drop-shadow(0 0 35px rgba(255, 0, 255, 0.9)); }
+        }
+
+        /* Floating Score Particle Animation */
+        .score-particle {
+            position: absolute;
+            pointer-events: none;
+            font-weight: bold;
+            font-size: 1.8rem;
+            animation: scorePopUp 1.2s ease-out forwards;
+            z-index: 60;
+            text-shadow: 2px 2px 4px rgba(0,0,0,0.5);
+        }
+
+        @keyframes scorePopUp {
+            0% { transform: translateY(0) scale(0.6); opacity: 1; }
+            50% { transform: translateY(-40px) scale(1.3); opacity: 1; }
+            100% { transform: translateY(-80px) scale(1); opacity: 0; }
+        }
+
+        /* Hover & Selection Halo Animation */
+        .fish-wrapper:hover .fish-body-container,
+        .fish-wrapper.selected-fish .fish-body-container {
+            filter: drop-shadow(0 0 15px rgba(255, 255, 255, 0.9)) drop-shadow(0 0 25px rgba(250, 204, 21, 0.9));
+        }
+
+        /* Gentle Float Animation for Play Screen */
+        @keyframes gentleFloat {
+            0%, 100% { transform: translateY(0px); }
+            50% { transform: translateY(-10px); }
+        }
+        .animate-float {
+            animation: gentleFloat 3.5s ease-in-out infinite;
+        }
+
+        /* Custom Scrollbar */
+        ::-webkit-scrollbar {
+            width: 8px;
+            height: 8px;
+        }
+        ::-webkit-scrollbar-track {
+            background: rgba(0,0,0,0.2);
+        }
+        ::-webkit-scrollbar-thumb {
+            background: rgba(255,255,255,0.4);
+            border-radius: 4px;
+        }
+    </style>
+</head>
+<body class="bg-slate-900 text-white min-h-[100dvh] flex flex-col justify-between">
+
+    <!-- TOP HEADER NAVBAR -->
+    <header class="bg-slate-950/90 border-b border-cyan-500/30 px-3 sm:px-4 py-2 sm:py-3 flex flex-wrap items-center justify-between gap-2 shadow-2xl z-40 backdrop-blur-md">
+        <!-- Title & Logo -->
+        <div class="flex items-center space-x-2 sm:space-x-3 cursor-pointer" onclick="showStartScreen()">
+            <span class="text-2xl sm:text-3xl md:text-4xl animate-bounce">🐠</span>
+            <div>
+                <h1 class="text-base sm:text-xl md:text-2xl font-black bg-gradient-to-r from-yellow-300 via-pink-400 to-cyan-300 bg-clip-text text-transparent tracking-wide leading-tight">
+                    Teacher Rosy's Fishy Points
+                </h1>
+                <p class="hidden sm:block text-[10px] md:text-xs text-cyan-200/80 font-medium">Interactive ESL Classroom Reward System</p>
+            </div>
+        </div>
+
+        <!-- Sync Status & Global Action Controls -->
+        <div class="flex flex-wrap items-center gap-1.5 sm:gap-2 md:gap-3">
+            <!-- Cloud Sync Indicator Badge -->
+            <button onclick="openSyncModal()" id="sync-status-badge" class="bg-emerald-500/20 text-emerald-300 border border-emerald-400/40 px-2.5 sm:px-3 py-1 rounded-full text-[11px] sm:text-xs font-bold flex items-center space-x-1 sm:space-x-1.5 hover:bg-emerald-500/30 transition shadow">
+                <span id="sync-icon">✓</span>
+                <span id="sync-text" class="max-w-[110px] sm:max-w-none truncate">Saved successfully</span>
+            </button>
+
+            <!-- Sound Toggle -->
+            <button onclick="toggleSound()" id="sound-btn" title="Toggle Sound Effects" class="bg-slate-800 hover:bg-slate-700 text-yellow-300 border border-slate-600 p-1.5 sm:p-2 rounded-full text-xs sm:text-sm shadow transition">
+                <span id="sound-icon">🔊</span>
+            </button>
+
+            <!-- Custom Background Picker -->
+            <label title="Change Aquarium Background Picture" class="bg-pink-600 hover:bg-pink-500 text-white font-bold py-1 px-2 sm:px-2.5 rounded-full text-xs shadow cursor-pointer transition flex items-center space-x-1">
+                <span>🖼️</span> <span class="hidden sm:inline">BG</span>
+                <input type="file" id="bg-file-input" onchange="changeAquariumBackground(event)" accept="image/*" class="hidden">
+            </label>
+
+            <!-- Export / Import Backup -->
+            <div class="flex space-x-1">
+                <button onclick="exportBackupJSON()" title="Download JSON Data Backup" class="bg-blue-600 hover:bg-blue-500 text-white font-bold py-1 px-2 sm:px-2.5 rounded-full text-xs shadow transition">
+                    📥 <span class="hidden sm:inline">Backup</span>
+                </button>
+                <label title="Restore JSON Data Backup" class="bg-indigo-600 hover:bg-indigo-500 text-white font-bold py-1 px-2 sm:px-2.5 rounded-full text-xs shadow cursor-pointer transition">
+                    📤 <span class="hidden sm:inline">Restore</span>
+                    <input type="file" id="import-file-input" onchange="importBackupJSON(event)" accept=".json" class="hidden">
+                </label>
+            </div>
+
+            <!-- Reset Grade Button (Grade view only) -->
+            <button id="reset-grade-btn" onclick="openResetModal()" class="hidden bg-red-500 hover:bg-red-600 text-white font-bold py-1 sm:py-1.5 px-2.5 sm:px-3 rounded-full text-[11px] sm:text-xs md:text-sm shadow-lg transition border-2 border-red-300">
+                🔄 <span class="hidden xs:inline">Reset</span>
+            </button>
+
+            <!-- Home Button (Grade view only) -->
+            <button id="home-btn" onclick="showHomeScreen()" class="hidden bg-yellow-400 hover:bg-yellow-300 text-blue-900 font-bold py-1 sm:py-1.5 px-3 sm:px-4 rounded-full text-[11px] sm:text-xs md:text-sm shadow-lg transition border-2 border-yellow-200 flex items-center space-x-1">
+                <span>🏠</span> <span>Grades</span>
+            </button>
+        </div>
+    </header>
+
+    <!-- MAIN CONTAINER -->
+    <main class="flex-grow flex flex-col relative w-full overflow-hidden">
+
+        <!-- SCREEN 0: INITIAL LAUNCH / PLAY SCREEN -->
+        <section id="start-screen" class="flex-grow flex flex-col items-center justify-center p-4 md:p-8 aquarium-bg min-h-[calc(100dvh-68px)] relative">
+            <div class="light-ray left-1/4"></div>
+            <div class="light-ray left-2/3"></div>
+
+            <div class="max-w-2xl w-full text-center z-10 my-auto">
+                <div class="bg-slate-950/45 backdrop-blur-md p-8 md:p-12 rounded-[2.5rem] border-4 border-white/40 shadow-2xl space-y-6 animate-float">
+                    <div class="inline-flex items-center justify-center space-x-3 text-5xl md:text-7xl drop-shadow-lg">
+                        <span>🐠</span>
+                        <span>🌈</span>
+                        <span>🐡</span>
+                    </div>
+
+                    <div class="space-y-2">
+                        <span class="inline-block bg-yellow-400/20 border border-yellow-300/50 text-yellow-200 text-xs md:text-sm font-extrabold uppercase tracking-widest px-4 py-1 rounded-full">
+                            ESL Classroom Rewards
+                        </span>
+                        <h2 class="text-4xl md:text-6xl font-black bg-gradient-to-r from-yellow-200 via-pink-200 to-cyan-200 bg-clip-text text-transparent drop-shadow-[0_4px_10px_rgba(0,0,0,0.6)] leading-tight">
+                            Teacher Rosy's Fishy Points
+                        </h2>
+                        <p class="text-cyan-100 text-base md:text-lg font-medium max-w-lg mx-auto pt-1">
+                            Tap Play to open your classroom aquariums. All student scores are automatically protected & synced across your iPad and computer!
+                        </p>
+                    </div>
+
+                    <!-- BIG PLAY BUTTON -->
+                    <div class="pt-2 flex flex-col sm:flex-row items-center justify-center gap-4">
+                        <button onclick="enterClassroomPlay()" class="w-full sm:w-auto bg-gradient-to-r from-emerald-400 via-teal-400 to-cyan-400 hover:from-emerald-300 hover:to-cyan-300 text-slate-950 font-black text-2xl md:text-3xl px-12 py-4 rounded-full shadow-[0_10px_25px_rgba(16,185,129,0.5)] border-4 border-white transform hover:scale-105 active:scale-95 transition-all flex items-center justify-center space-x-3 cursor-pointer">
+                            <span>▶</span>
+                            <span>Play</span>
+                        </button>
+                    </div>
+
+                    <!-- Cloud Room Quick Status Pill -->
+                    <div class="pt-2 flex flex-wrap items-center justify-center gap-3 text-xs text-cyan-100/90">
+                        <button onclick="openSyncModal()" class="bg-white/15 hover:bg-white/25 border border-white/30 px-4 py-1.5 rounded-full font-bold transition flex items-center space-x-1.5">
+                            <span>☁️</span>
+                            <span id="start-room-label">Classroom Sync: Connected</span>
+                        </button>
+                        <span id="start-total-saved-label" class="bg-black/30 px-4 py-1.5 rounded-full font-bold text-yellow-300">
+                            🛡️ Scores Protected
+                        </span>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- SCREEN 1: GRADE SELECTION SCREEN -->
+        <section id="home-screen" class="hidden flex-grow flex flex-col items-center justify-center p-4 md:p-8 aquarium-bg min-h-[calc(100dvh-68px)] relative">
+            <div class="light-ray left-1/4"></div>
+            <div class="light-ray left-2/3"></div>
+            
+            <div class="max-w-4xl w-full text-center z-10 space-y-6 md:space-y-8 my-auto">
+                <div class="bg-white/15 backdrop-blur-md p-6 md:p-8 rounded-3xl border-2 border-white/30 shadow-2xl">
+                    <h2 class="text-3xl md:text-5xl font-extrabold text-white drop-shadow-[0_4px_8px_rgba(0,0,0,0.5)] mb-3">
+                        Choose a Class Tank 🌊
+                    </h2>
+                    <p class="text-cyan-100 text-base md:text-xl font-medium max-w-2xl mx-auto">
+                        Select Grade 1–6 to open that class's aquarium. Tap any swimming fish directly to give or subtract points!
+                    </p>
+                </div>
+
+                <!-- 6 GRADE BUTTONS GRID -->
+                <div class="grid grid-cols-2 md:grid-cols-3 gap-4 md:gap-6 max-w-3xl mx-auto">
+                    <button onclick="selectGrade(1)" class="group bg-gradient-to-br from-pink-400 to-rose-500 hover:from-pink-300 hover:to-rose-400 p-5 md:p-6 rounded-2xl shadow-xl border-4 border-pink-200 transform hover:-translate-y-2 hover:scale-105 active:scale-95 transition-all text-left flex flex-col justify-between h-36 md:h-44 relative overflow-hidden">
+                        <span class="text-3xl md:text-4xl">🦄</span>
+                        <div>
+                            <span class="block text-2xl md:text-3xl font-extrabold text-white drop-shadow">Grade 1</span>
+                            <span id="g1-badge" class="text-xs md:text-sm text-pink-100 font-semibold bg-black/20 px-2 py-0.5 rounded-full inline-block mt-1">0 total pts</span>
+                        </div>
+                    </button>
+
+                    <button onclick="selectGrade(2)" class="group bg-gradient-to-br from-amber-400 to-orange-500 hover:from-amber-300 hover:to-orange-400 p-5 md:p-6 rounded-2xl shadow-xl border-4 border-amber-200 transform hover:-translate-y-2 hover:scale-105 active:scale-95 transition-all text-left flex flex-col justify-between h-36 md:h-44 relative overflow-hidden">
+                        <span class="text-3xl md:text-4xl">🦁</span>
+                        <div>
+                            <span class="block text-2xl md:text-3xl font-extrabold text-white drop-shadow">Grade 2</span>
+                            <span id="g2-badge" class="text-xs md:text-sm text-amber-100 font-semibold bg-black/20 px-2 py-0.5 rounded-full inline-block mt-1">0 total pts</span>
+                        </div>
+                    </button>
+
+                    <button onclick="selectGrade(3)" class="group bg-gradient-to-br from-emerald-400 to-teal-600 hover:from-emerald-300 hover:to-teal-500 p-5 md:p-6 rounded-2xl shadow-xl border-4 border-emerald-200 transform hover:-translate-y-2 hover:scale-105 active:scale-95 transition-all text-left flex flex-col justify-between h-36 md:h-44 relative overflow-hidden">
+                        <span class="text-3xl md:text-4xl">🐸</span>
+                        <div>
+                            <span class="block text-2xl md:text-3xl font-extrabold text-white drop-shadow">Grade 3</span>
+                            <span id="g3-badge" class="text-xs md:text-sm text-emerald-100 font-semibold bg-black/20 px-2 py-0.5 rounded-full inline-block mt-1">0 total pts</span>
+                        </div>
+                    </button>
+
+                    <button onclick="selectGrade(4)" class="group bg-gradient-to-br from-cyan-400 to-blue-600 hover:from-cyan-300 hover:to-blue-500 p-5 md:p-6 rounded-2xl shadow-xl border-4 border-cyan-200 transform hover:-translate-y-2 hover:scale-105 active:scale-95 transition-all text-left flex flex-col justify-between h-36 md:h-44 relative overflow-hidden">
+                        <span class="text-3xl md:text-4xl">🐬</span>
+                        <div>
+                            <span class="block text-2xl md:text-3xl font-extrabold text-white drop-shadow">Grade 4</span>
+                            <span id="g4-badge" class="text-xs md:text-sm text-cyan-100 font-semibold bg-black/20 px-2 py-0.5 rounded-full inline-block mt-1">0 total pts</span>
+                        </div>
+                    </button>
+
+                    <button onclick="selectGrade(5)" class="group bg-gradient-to-br from-indigo-400 to-purple-600 hover:from-indigo-300 hover:to-purple-500 p-5 md:p-6 rounded-2xl shadow-xl border-4 border-indigo-200 transform hover:-translate-y-2 hover:scale-105 active:scale-95 transition-all text-left flex flex-col justify-between h-36 md:h-44 relative overflow-hidden">
+                        <span class="text-3xl md:text-4xl">🚀</span>
+                        <div>
+                            <span class="block text-2xl md:text-3xl font-extrabold text-white drop-shadow">Grade 5</span>
+                            <span id="g5-badge" class="text-xs md:text-sm text-indigo-100 font-semibold bg-black/20 px-2 py-0.5 rounded-full inline-block mt-1">0 total pts</span>
+                        </div>
+                    </button>
+
+                    <button onclick="selectGrade(6)" class="group bg-gradient-to-br from-purple-500 to-pink-600 hover:from-purple-400 hover:to-pink-500 p-5 md:p-6 rounded-2xl shadow-xl border-4 border-purple-200 transform hover:-translate-y-2 hover:scale-105 active:scale-95 transition-all text-left flex flex-col justify-between h-36 md:h-44 relative overflow-hidden">
+                        <span class="text-3xl md:text-4xl">👑</span>
+                        <div>
+                            <span class="block text-2xl md:text-3xl font-extrabold text-white drop-shadow">Grade 6</span>
+                            <span id="g6-badge" class="text-xs md:text-sm text-purple-100 font-semibold bg-black/20 px-2 py-0.5 rounded-full inline-block mt-1">0 total pts</span>
+                        </div>
+                    </button>
+                </div>
+
+                <!-- Footer info in main menu -->
+                <div class="text-cyan-200/90 text-xs md:text-sm font-medium">
+                    ✨ Real-Time Cloud Sync + IndexedDB Score Shield Active
+                </div>
+            </div>
+        </section>
+
+        <!-- SCREEN 2: PURE FULL-SCREEN AQUARIUM (NO CARDS BELOW) -->
+        <section id="grade-screen" class="hidden flex-grow flex flex-col relative w-full h-full min-h-[calc(100dvh-68px)]">
+            
+            <!-- THE FULL AQUARIUM TANK -->
+            <div id="aquarium-container" ondragover="event.preventDefault()" ondrop="window.handleTankImageDrop(event)" class="relative w-full flex-grow aquarium-bg shadow-2xl overflow-hidden select-none">
+                <!-- Custom Uploaded Image Layer (Hidden until teacher uploads or drops a photo) -->
+                <img id="tank-bg-image" src="" alt="Custom Underwater Coral Reef" class="hidden absolute inset-0 w-full h-full object-cover object-bottom pointer-events-none z-0">
+
+                <div class="light-ray left-1/5"></div>
+                <div class="light-ray left-1/2"></div>
+                <div class="light-ray left-4/5"></div>
+
+                <!-- Current Grade Header Overlay -->
+                <div class="absolute top-2.5 sm:top-4 left-2.5 sm:left-4 right-2.5 sm:right-auto z-20 bg-black/55 backdrop-blur-md px-3 sm:px-4 py-1.5 sm:py-2 rounded-2xl sm:rounded-full border border-white/30 text-white font-bold text-xs sm:text-sm md:text-lg flex flex-wrap items-center justify-between sm:justify-start gap-1.5 sm:gap-3 shadow-xl">
+                    <div class="flex items-center gap-1.5 sm:gap-2">
+                        <span id="current-grade-title" class="text-yellow-300 font-black">Grade 1 Tank</span>
+                        <span class="text-white/40">|</span>
+                        <span id="total-class-points" class="text-cyan-200">Total: 0 pts</span>
+                        <span class="hidden sm:inline text-white/40">|</span>
+                        <span id="total-class-fish" class="hidden sm:inline text-emerald-200 text-xs md:text-sm">10 Fish</span>
+                    </div>
+                    <div class="flex items-center space-x-1.5">
+                        <button onclick="window.addFishToCurrentGrade()" title="Add a new student fish" class="bg-emerald-500 hover:bg-emerald-400 text-slate-950 font-black text-[11px] sm:text-xs px-2.5 py-1 rounded-full shadow transition transform active:scale-95">
+                            + Fish
+                        </button>
+                        <button onclick="window.removeLastFishFromCurrentGrade()" title="Remove last student fish" class="bg-rose-500 hover:bg-rose-400 text-white font-black text-[11px] sm:text-xs px-2.5 py-1 rounded-full shadow transition transform active:scale-95">
+                            − Fish
+                        </button>
+                    </div>
+                </div>
+
+                <!-- SWIMMING FISH CONTAINER -->
+                <div id="fish-tank-area" class="absolute inset-0 z-10 w-full h-full"></div>
+            </div>
+        </section>
+
+    </main>
+
+    <!-- MODAL 1: CLOUD SYNC & CLASSROOM ID SETTINGS -->
+    <div id="sync-modal" class="hidden fixed inset-0 z-50 bg-black/70 backdrop-blur-sm flex items-center justify-center p-4">
+        <div class="bg-slate-800 border-4 border-cyan-400 rounded-3xl p-6 max-w-md w-full shadow-2xl space-y-4">
+            <div class="flex justify-between items-center">
+                <h3 class="text-xl font-bold text-cyan-300">☁️ Cross-Device Cloud Sync</h3>
+                <button onclick="closeSyncModal()" class="text-slate-400 hover:text-white text-2xl font-bold">✕</button>
+            </div>
+            <p class="text-xs md:text-sm text-slate-300">
+                Enter the exact same <strong>Classroom ID</strong> on both your iPad Safari and Windows Chrome to synchronize all 6 grades, student names, and points in real time!
+            </p>
+            <div class="space-y-2">
+                <label class="text-xs font-bold text-cyan-200 uppercase">Classroom ID</label>
+                <input type="text" id="classroom-id-input" class="w-full bg-slate-900 text-white border-2 border-slate-600 rounded-xl px-3 py-2 font-bold focus:outline-none focus:border-cyan-400" placeholder="e.g., rosy-esl-room">
+            </div>
+            <div class="bg-slate-900/80 p-3 rounded-xl border border-slate-700 space-y-1 text-xs">
+                <p id="sync-modal-status" class="text-emerald-300 font-bold">Status: Ready</p>
+                <p id="sync-last-saved" class="text-slate-400">Last local & cloud backup: Just now</p>
+            </div>
+            <div class="flex space-x-2 pt-2">
+                <button onclick="forceSyncNow()" class="bg-emerald-600 hover:bg-emerald-500 text-white font-bold px-3 py-2 rounded-xl text-xs transition">🔄 Sync Now</button>
+                <button onclick="closeSyncModal()" class="flex-1 bg-slate-600 hover:bg-slate-500 text-white font-bold py-2 rounded-xl transition">Close</button>
+                <button onclick="setCustomClassroomId()" class="flex-1 bg-cyan-500 hover:bg-cyan-400 text-slate-950 font-extrabold py-2 rounded-xl shadow-lg transition">Connect ID</button>
+            </div>
+        </div>
+    </div>
+
+    <!-- MODAL 2: FISH INTERACTION POPUP -->
+    <div id="fish-popup-modal" class="hidden fixed inset-0 z-50 bg-black/60 backdrop-blur-sm flex items-center justify-center p-4">
+        <div class="bg-slate-800 border-4 border-yellow-400 rounded-3xl p-6 max-w-sm w-full shadow-2xl space-y-4 relative">
+            <div class="flex justify-between items-center">
+                <span id="popup-tier-badge" class="text-xs font-extrabold uppercase tracking-wider px-3 py-1 rounded-full bg-slate-900 border border-slate-600 text-emerald-400">
+                    Green • Scale x0.60
+                </span>
+                <button onclick="closeFishPopupModal()" class="text-slate-400 hover:text-white text-2xl font-bold px-2">✕</button>
+            </div>
+
+            <!-- Student Name Input & Edit -->
+            <div class="space-y-1 text-center">
+                <div class="flex items-center justify-center space-x-2">
+                    <input type="text" id="popup-student-name-input" maxlength="18" class="bg-slate-900 text-yellow-300 font-black text-xl sm:text-2xl md:text-3xl text-center border-2 border-slate-600 rounded-xl px-3 py-1.5 focus:outline-none focus:border-yellow-400 w-full" placeholder="Student Name">
+                </div>
+                <p class="text-xs text-slate-400 font-medium">Tap name to edit • Changes save automatically</p>
+            </div>
+                <p class="text-xs text-slate-400 font-medium">Click name to edit • Changes save automatically</p>
+            </div>
+
+            <!-- Point Display & Controls -->
+            <div class="bg-slate-900/90 rounded-2xl p-4 border border-slate-700 space-y-4">
+                <div class="text-center">
+                    <span id="popup-student-points" class="text-5xl font-black text-yellow-300 tracking-tight drop-shadow-md">
+                        0
+                    </span>
+                    <span class="block text-xs font-bold text-cyan-200 uppercase tracking-widest mt-1">Total Points</span>
+                </div>
+
+                <!-- Main +/- 1 Buttons -->
+                <div class="grid grid-cols-2 gap-3">
+                    <button onclick="window.changePopupPoints(-1, event)" class="bg-gradient-to-r from-red-500 to-rose-600 hover:from-red-400 hover:to-rose-500 text-white font-black text-2xl md:text-3xl py-4 rounded-2xl shadow-lg border-2 border-red-300 transform active:scale-95 transition flex items-center justify-center space-x-2">
+                        <span>−1</span>
+                    </button>
+                    <button onclick="window.changePopupPoints(1, event)" class="bg-gradient-to-r from-emerald-400 to-teal-500 hover:from-emerald-300 hover:to-teal-400 text-slate-950 font-black text-2xl md:text-3xl py-4 rounded-2xl shadow-lg border-2 border-emerald-200 transform active:scale-95 transition flex items-center justify-center space-x-2">
+                        <span>+1</span>
+                    </button>
+                </div>
+
+                <!-- Fast +5 / -5 Buttons -->
+                <div class="grid grid-cols-2 gap-3 pt-1">
+                    <button onclick="window.changePopupPoints(-5, event)" class="bg-slate-800 hover:bg-slate-700 text-rose-300 font-bold py-3 rounded-xl border border-rose-500/30 text-sm md:text-base transition">
+                        −5 Pts
+                    </button>
+                    <button onclick="window.changePopupPoints(5, event)" class="bg-slate-800 hover:bg-slate-700 text-emerald-300 font-bold py-3 rounded-xl border border-emerald-500/30 text-sm md:text-base transition">
+                        +5 Pts
+                    </button>
+                </div>
+            </div>
+
+            <!-- Footer Action Buttons -->
+            <div class="flex justify-between items-center pt-1 gap-2">
+                <div class="flex items-center space-x-2">
+                    <button onclick="window.resetSingleStudentPopupPoints()" class="text-xs text-amber-300 hover:text-amber-200 font-bold px-3 py-1.5 rounded-lg border border-amber-500/30 hover:bg-amber-500/10 transition">
+                        🔄 Reset Pts
+                    </button>
+                    <button onclick="window.deleteSelectedFishFromPopup()" class="text-xs text-rose-400 hover:text-rose-300 font-bold px-3 py-1.5 rounded-lg border border-rose-500/30 hover:bg-rose-500/10 transition">
+                        🗑️ Remove
+                    </button>
+                </div>
+                <button onclick="closeFishPopupModal()" class="bg-yellow-400 hover:bg-yellow-300 text-slate-950 font-extrabold px-6 py-2 rounded-xl shadow-md transition">
+                    Done
+                </button>
+            </div>
+        </div>
+    </div>
+
+    <!-- MODAL 3: CONFIRMATION MODAL (FOR RESETTING OR REMOVING STUDENT DATA) -->
+    <div id="reset-modal" class="hidden fixed inset-0 z-50 bg-black/70 backdrop-blur-sm flex items-center justify-center p-4">
+        <div class="bg-slate-800 border-4 border-red-500 rounded-3xl p-6 max-w-md w-full shadow-2xl text-center space-y-4">
+            <div class="text-5xl">⚠️</div>
+            <h3 id="reset-modal-title" class="text-2xl font-bold text-red-400">Reset Grade Points?</h3>
+            <p id="reset-modal-text" class="text-slate-300 text-sm md:text-base">
+                Are you sure you want to reset all points for this grade back to 0? Student names will be kept.
+            </p>
+            <div class="flex space-x-3 pt-3">
+                <button onclick="closeResetModal()" class="flex-1 bg-slate-600 hover:bg-slate-500 text-white font-bold py-2.5 rounded-xl transition">Cancel</button>
+                <button id="reset-modal-confirm-btn" onclick="confirmResetGradePoints()" class="flex-1 bg-red-600 hover:bg-red-500 text-white font-bold py-2.5 rounded-xl shadow-lg transition">Yes, Confirm</button>
+            </div>
+        </div>
+    </div>
+
+    <!-- FIREBASE & APPLICATION LOGIC -->
+    <script type="module">
+        import { initializeApp } from "https://www.gstatic.com/firebasejs/11.6.1/firebase-app.js";
+        import { getAuth, signInAnonymously, signInWithCustomToken } from "https://www.gstatic.com/firebasejs/11.6.1/firebase-auth.js";
+        import { getFirestore, doc, setDoc, getDoc, onSnapshot } from "https://www.gstatic.com/firebasejs/11.6.1/firebase-firestore.js";
+
+        // Firebase & Storage State
+        let db = null;
+        let auth = null;
+        let currentUser = null;
+        let isCloudConnected = false;
+        let hasUnsyncedChanges = false;
+        let lastUpdatedTimestamp = 0;
+
+        const STORAGE_KEY_PRIMARY = 'teacher_rosy_fishy_points_v2';
+        const STORAGE_KEY_META = 'teacher_rosy_fishy_meta_v2';
+        const IDB_NAME = 'TeacherRosyFishyDB';
+        const IDB_STORE = 'classroomStore';
+
+        const appId = typeof __app_id !== 'undefined' ? __app_id : 'teacher-rosy-fishy-points';
+        let classroomId = localStorage.getItem('teacher_rosy_classroom_id') || 'rosy-default-room';
+
+        // 15 RAINBOW TIER EVOLUTION COLOR & SIZE RULES (STRICT MAPPING)
+        const RAINBOW_TIERS = [
+            { min: 0,  max: 4,  name: 'Green',            scale: 0.60, primary: '#2ecc71', secondary: '#15803d', gradient: null },
+            { min: 5,  max: 9,  name: 'Lime Green',       scale: 0.70, primary: '#a6e22e', secondary: '#4d7c0f', gradient: null },
+            { min: 10, max: 14, name: 'Yellow',           scale: 0.80, primary: '#f1c40f', secondary: '#a16207', gradient: null },
+            { min: 15, max: 19, name: 'Golden Yellow',    scale: 0.90, primary: '#f39c12', secondary: '#b45309', gradient: null },
+            { min: 20, max: 24, name: 'Orange',           scale: 1.00, primary: '#e67e22', secondary: '#c2410c', gradient: null },
+            { min: 25, max: 29, name: 'Coral',            scale: 1.10, primary: '#ff6b6b', secondary: '#ff9770', gradient: null },
+            { min: 30, max: 34, name: 'Red',              scale: 1.20, primary: '#e74c3c', secondary: '#b91c1c', gradient: null },
+            { min: 35, max: 39, name: 'Pink',             scale: 1.30, primary: '#ff79c6', secondary: '#be185d', gradient: null },
+            { min: 40, max: 49, name: 'Purple',           scale: 1.40, primary: '#9b59b6', secondary: '#6b21a8', gradient: null },
+            { min: 50, max: 59, name: 'Violet',           scale: 1.50, primary: '#8e44ad', secondary: '#4c1d95', gradient: null },
+            { min: 60, max: 69, name: 'Blue',             scale: 1.60, primary: '#2980b9', secondary: '#1e40af', gradient: null },
+            { min: 70, max: 79, name: 'Sky Blue',         scale: 1.70, primary: '#3498db', secondary: '#0284c7', gradient: null },
+            { min: 80, max: 89, name: 'Turquoise',        scale: 1.80, primary: '#1abc9c', secondary: '#0f766e', gradient: null },
+            { min: 90, max: 99, name: 'Rainbow gradient', scale: 1.90, primary: '#ff007f', secondary: '#00f0ff', gradient: ['#ff0055', '#ff9900', '#ffff00', '#00ff66', '#00ffff', '#9900ff'] },
+            { min: 100, max: 9999, name: 'Magical Rainbow', scale: 2.00, primary: '#ffd700', secondary: '#ff00ea', gradient: ['#ff0000', '#ff7f00', '#ffff00', '#00ff00', '#0000ff', '#4b0082', '#8b00ff'], isLegendary: true }
+        ];
+
+        // Global State
+        window.appData = null;
+        window.currentGrade = null;
+        window.soundEnabled = true;
+        window.selectedStudentId = null;
+        let audioCtx = null;
+        let fishStateList = [];
+        let animationFrameId = null;
+        let unsubscribeSnapshot = null;
+        let nameSaveTimeout = null;
+        let pendingConfirmAction = null;
+
+        // ==========================================
+        // INDEXEDDB + LOCALSTORAGE DUAL BACKUP SHIELD
+        // ==========================================
+        function openIndexedDB() {
+            return new Promise((resolve, reject) => {
+                if (!window.indexedDB) return reject('IndexedDB not supported');
+                const request = indexedDB.open(IDB_NAME, 1);
+                request.onupgradeneeded = (e) => {
+                    const idb = e.target.result;
+                    if (!idb.objectStoreNames.contains(IDB_STORE)) {
+                        idb.createObjectStore(IDB_STORE);
+                    }
+                };
+                request.onsuccess = () => resolve(request.result);
+                request.onerror = () => reject(request.error);
+            });
+        }
+
+        async function saveToIndexedDB(payload) {
+            try {
+                const idb = await openIndexedDB();
+                return new Promise((resolve) => {
+                    const tx = idb.transaction(IDB_STORE, 'readwrite');
+                    tx.objectStore(IDB_STORE).put(payload, 'latestBackup');
+                    tx.oncomplete = () => resolve(true);
+                    tx.onerror = () => resolve(false);
+                });
+            } catch (e) {
+                return false;
+            }
+        }
+
+        async function loadFromIndexedDB() {
+            try {
+                const idb = await openIndexedDB();
+                return new Promise((resolve) => {
+                    const tx = idb.transaction(IDB_STORE, 'readonly');
+                    const req = tx.objectStore(IDB_STORE).get('latestBackup');
+                    req.onsuccess = () => resolve(req.result || null);
+                    req.onerror = () => resolve(null);
+                });
+            } catch (e) {
+                return null;
+            }
+        }
+
+        function isValidClassroomData(data) {
+            return data && typeof data === 'object' && Array.isArray(data.grade_1) && data.grade_1.length > 0;
+        }
+
+        function calculateGrandTotalPoints(data) {
+            if (!isValidClassroomData(data)) return 0;
+            let total = 0;
+            for (let g = 1; g <= 6; g++) {
+                const list = data[`grade_${g}`] || [];
+                total += list.reduce((sum, s) => sum + (Number(s.points) || 0), 0);
+            }
+            return total;
+        }
+
+        async function saveLocalProtectedBackup(timestamp, pendingFlag) {
+            if (!isValidClassroomData(window.appData)) return;
+            const meta = {
+                updatedAt: timestamp,
+                hasUnsyncedChanges: pendingFlag,
+                classroomId: classroomId
+            };
+            try {
+                localStorage.setItem(STORAGE_KEY_PRIMARY, JSON.stringify(window.appData));
+                localStorage.setItem(STORAGE_KEY_META, JSON.stringify(meta));
+            } catch (e) {
+                console.warn('localStorage quota warning', e);
+            }
+            await saveToIndexedDB({
+                gradesData: window.appData,
+                meta: meta
+            });
+        }
+
+        async function loadProtectedLocalData() {
+            let lsData = null;
+            let lsMeta = { updatedAt: 0, hasUnsyncedChanges: false };
+
+            try {
+                const raw = localStorage.getItem(STORAGE_KEY_PRIMARY);
+                const rawMeta = localStorage.getItem(STORAGE_KEY_META);
+                if (raw) {
+                    const parsed = JSON.parse(raw);
+                    if (isValidClassroomData(parsed)) lsData = parsed;
+                }
+                if (rawMeta) {
+                    lsMeta = JSON.parse(rawMeta) || lsMeta;
+                }
+            } catch (e) {
+                console.warn('Failed reading localStorage', e);
+            }
+
+            const idbRecord = await loadFromIndexedDB();
+            const idbData = idbRecord && isValidClassroomData(idbRecord.gradesData) ? idbRecord.gradesData : null;
+            const idbMeta = (idbRecord && idbRecord.meta) ? idbRecord.meta : { updatedAt: 0, hasUnsyncedChanges: false };
+
+            // Pick whichever local store has the newest timestamp (or valid non-empty scores)
+            if (lsData && idbData) {
+                if ((idbMeta.updatedAt || 0) > (lsMeta.updatedAt || 0)) {
+                    window.appData = idbData;
+                    lastUpdatedTimestamp = idbMeta.updatedAt || Date.now();
+                    hasUnsyncedChanges = Boolean(idbMeta.hasUnsyncedChanges);
+                } else {
+                    window.appData = lsData;
+                    lastUpdatedTimestamp = lsMeta.updatedAt || Date.now();
+                    hasUnsyncedChanges = Boolean(lsMeta.hasUnsyncedChanges);
+                }
+            } else if (lsData) {
+                window.appData = lsData;
+                lastUpdatedTimestamp = lsMeta.updatedAt || Date.now();
+                hasUnsyncedChanges = Boolean(lsMeta.hasUnsyncedChanges);
+            } else if (idbData) {
+                window.appData = idbData;
+                lastUpdatedTimestamp = idbMeta.updatedAt || Date.now();
+                hasUnsyncedChanges = Boolean(idbMeta.hasUnsyncedChanges);
+            } else {
+                // Only initialize default 0-point students if NO prior saved data exists anywhere
+                initDefaultData();
+                lastUpdatedTimestamp = 0;
+                hasUnsyncedChanges = false;
+            }
+
+            updateGradeBadges();
+        }
+
+        // Allow teacher to pick or drag-and-drop custom background image file
+        window.applyTankBackgroundDataUrl = function(dataUrl) {
+            document.querySelectorAll('.aquarium-bg').forEach(el => {
+                el.style.backgroundImage = `linear-gradient(180deg, rgba(14, 165, 233, 0.05) 0%, rgba(2, 132, 199, 0.12) 100%), url('${dataUrl}')`;
+            });
+            const tankImg = document.getElementById('tank-bg-image');
+            if (tankImg) {
+                tankImg.src = dataUrl;
+                tankImg.classList.remove('hidden');
+            }
+            window.showToast('Aquarium background updated!', '🖼️');
+        };
+
+        window.changeAquariumBackground = function(event) {
+            const file = event.target.files[0];
+            if (!file) return;
+            const reader = new FileReader();
+            reader.onload = function(e) {
+                window.applyTankBackgroundDataUrl(e.target.result);
+            };
+            reader.readAsDataURL(file);
+        };
+
+        window.handleTankImageDrop = function(event) {
+            event.preventDefault();
+            const file = event.dataTransfer?.files?.[0];
+            if (!file || !file.type.startsWith('image/')) return;
+            const reader = new FileReader();
+            reader.onload = function(e) {
+                window.applyTankBackgroundDataUrl(e.target.result);
+            };
+            reader.readAsDataURL(file);
+        };
+
+        // ==========================================
+        // FIREBASE CLOUD FIRESTORE REAL-TIME SYNC
+        // ==========================================
+        async function initCloudFirebase() {
+            if (!navigator.onLine) {
+                updateSyncBadge('offline');
+            } else {
+                updateSyncBadge('syncing');
+            }
+
+            try {
+                if (typeof __firebase_config !== 'undefined' && __firebase_config) {
+                    const firebaseConfig = JSON.parse(__firebase_config);
+                    const app = initializeApp(firebaseConfig);
+                    db = getFirestore(app);
+                    auth = getAuth(app);
+
+                    if (typeof __initial_auth_token !== 'undefined' && __initial_auth_token) {
+                        const cred = await signInWithCustomToken(auth, __initial_auth_token);
+                        currentUser = cred.user;
+                    } else {
+                        const cred = await signInAnonymously(auth);
+                        currentUser = cred.user;
+                    }
+
+                    if (!currentUser) {
+                        updateSyncBadge('error');
+                        return;
+                    }
+
+                    isCloudConnected = true;
+                    await setupCloudSnapshotListener();
+                } else {
+                    updateSyncBadge(navigator.onLine ? 'saved' : 'offline');
+                }
+            } catch (err) {
+                console.warn("Firestore connection error:", err);
+                updateSyncBadge(navigator.onLine ? 'error' : 'offline');
+            }
+        }
+
+        async function setupCloudSnapshotListener() {
+            if (!db || !isCloudConnected || !currentUser) return;
+            if (unsubscribeSnapshot) unsubscribeSnapshot();
+
+            const docRef = doc(db, 'artifacts', appId, 'public', 'data', 'classrooms', classroomId);
+
+            // If we have unsynced offline changes waiting on this device, push them FIRST before listening
+            if (hasUnsyncedChanges && isValidClassroomData(window.appData)) {
+                await pushDataToCloud(true);
+            }
+
+            unsubscribeSnapshot = onSnapshot(docRef, async (docSnap) => {
+                if (docSnap.exists()) {
+                    const payload = docSnap.data();
+                    const cloudData = payload.gradesData;
+                    const cloudUpdatedAt = Number(payload.updatedAtMs) || 0;
+
+                    // Never replace valid saved scores with empty or corrupted cloud data
+                    if (isValidClassroomData(cloudData)) {
+                        // Only overwrite local data if cloud is newer OR we don't have pending offline edits
+                        if (!hasUnsyncedChanges || cloudUpdatedAt >= lastUpdatedTimestamp) {
+                            window.appData = cloudData;
+                            lastUpdatedTimestamp = cloudUpdatedAt || Date.now();
+                            hasUnsyncedChanges = false;
+                            await saveLocalProtectedBackup(lastUpdatedTimestamp, false);
+
+                            updateGradeBadges();
+                            if (window.currentGrade) {
+                                initFishPhysics();
+                                updateTotalGradePointsDisplay();
+                                if (window.selectedStudentId !== null) {
+                                    window.syncPopupValues();
+                                }
+                            }
+                        }
+                    }
+                    updateSyncBadge('saved');
+                } else {
+                    // Cloud room does not exist yet: only upload local data if it is valid (never overwrite with blank)
+                    if (isValidClassroomData(window.appData) && (lastUpdatedTimestamp > 0 || calculateGrandTotalPoints(window.appData) > 0)) {
+                        await pushDataToCloud(true);
+                    } else {
+                        updateSyncBadge('saved');
+                    }
+                }
+            }, (error) => {
+                console.error("Firestore real-time listener error:", error);
+                updateSyncBadge(navigator.onLine ? 'error' : 'offline');
+            });
+        }
+
+        async function pushDataToCloud(skipTimestampBump = false) {
+            if (!isValidClassroomData(window.appData)) return;
+
+            if (!skipTimestampBump) {
+                lastUpdatedTimestamp = Date.now();
+            } else if (!lastUpdatedTimestamp) {
+                lastUpdatedTimestamp = Date.now();
+            }
+
+            hasUnsyncedChanges = true;
+            // 1. Immediately protect scores in IndexedDB + localStorage first!
+            await saveLocalProtectedBackup(lastUpdatedTimestamp, true);
+            updateGradeBadges();
+
+            if (!navigator.onLine) {
+                updateSyncBadge('offline');
+                return;
+            }
+
+            updateSyncBadge('syncing');
+
+            if (db && isCloudConnected && currentUser) {
+                try {
+                    const docRef = doc(db, 'artifacts', appId, 'public', 'data', 'classrooms', classroomId);
+                    await setDoc(docRef, {
+                        gradesData: window.appData,
+                        updatedAtMs: lastUpdatedTimestamp,
+                        updatedAt: new Date(lastUpdatedTimestamp).toISOString(),
+                        updatedByUid: currentUser.uid
+                    }, { merge: true });
+
+                    hasUnsyncedChanges = false;
+                    await saveLocalProtectedBackup(lastUpdatedTimestamp, false);
+                    updateSyncBadge('saved');
+                } catch (e) {
+                    console.error("Cloud push failed:", e);
+                    updateSyncBadge(navigator.onLine ? 'error' : 'offline');
+                }
+            } else {
+                // Local-only mode when offline/unconfigured
+                hasUnsyncedChanges = false;
+                await saveLocalProtectedBackup(lastUpdatedTimestamp, false);
+                updateSyncBadge('saved');
+            }
+        }
+
+        window.forceSyncNow = async function() {
+            if (!navigator.onLine) {
+                updateSyncBadge('offline');
+                window.showToast('Device is offline – will sync when connected', '📡');
+                return;
+            }
+            if (isCloudConnected && currentUser) {
+                await pushDataToCloud(true);
+                window.showToast('Synchronized with Cloud!', '☁️');
+            } else {
+                await initCloudFirebase();
+            }
+        };
+
+        // Re-sync automatically when iPad/Windows Wi-Fi reconnects or tab wakes from sleep
+        window.addEventListener('online', async () => {
+            if (hasUnsyncedChanges || isCloudConnected) {
+                await pushDataToCloud(true);
+            } else {
+                await initCloudFirebase();
+            }
+        });
+
+        window.addEventListener('offline', () => {
+            updateSyncBadge('offline');
+        });
+
+        document.addEventListener('visibilitychange', async () => {
+            if (document.visibilityState === 'visible' && navigator.onLine && hasUnsyncedChanges) {
+                await pushDataToCloud(true);
+            }
+        });
+
+        function updateSyncBadge(state) {
+            const badge = document.getElementById('sync-status-badge');
+            const icon = document.getElementById('sync-icon');
+            const text = document.getElementById('sync-text');
+            const modalStatus = document.getElementById('sync-modal-status');
+            const lastSavedEl = document.getElementById('sync-last-saved');
+            const startRoomEl = document.getElementById('start-room-label');
+
+            if (lastSavedEl && lastUpdatedTimestamp > 0) {
+                lastSavedEl.innerText = `Last saved: ${new Date(lastUpdatedTimestamp).toLocaleTimeString()}`;
+            }
+
+            if (state === 'saved') {
+                if (badge) badge.className = "bg-emerald-500/20 text-emerald-300 border border-emerald-400/40 px-3 py-1 rounded-full text-xs font-bold flex items-center space-x-1.5 shadow";
+                if (icon) icon.innerText = "✓";
+                if (text) text.innerText = "Saved successfully";
+                if (modalStatus) {
+                    modalStatus.className = "text-emerald-300 font-bold";
+                    modalStatus.innerText = `Status: Saved successfully (Room: ${classroomId})`;
+                }
+                if (startRoomEl) startRoomEl.innerText = `Room: ${classroomId} • Saved ✓`;
+            } else if (state === 'syncing') {
+                if (badge) badge.className = "bg-amber-500/20 text-amber-300 border border-amber-400/40 px-3 py-1 rounded-full text-xs font-bold flex items-center space-x-1.5 shadow animate-pulse";
+                if (icon) icon.innerText = "⏳";
+                if (text) text.innerText = "Saving...";
+                if (modalStatus) {
+                    modalStatus.className = "text-amber-300 font-bold";
+                    modalStatus.innerText = `Status: Saving...`;
+                }
+            } else if (state === 'offline') {
+                if (badge) badge.className = "bg-amber-600/25 text-amber-200 border border-amber-400/50 px-3 py-1 rounded-full text-xs font-bold flex items-center space-x-1.5 shadow";
+                if (icon) icon.innerText = "📡";
+                if (text) text.innerText = "Offline – changes will sync when connected";
+                if (modalStatus) {
+                    modalStatus.className = "text-amber-300 font-bold";
+                    modalStatus.innerText = `Status: Offline – changes will sync when connected`;
+                }
+                if (startRoomEl) startRoomEl.innerText = `Offline Mode (Local Backup Active)`;
+            } else {
+                if (badge) badge.className = "bg-rose-500/25 text-rose-200 border border-rose-400/50 px-3 py-1 rounded-full text-xs font-bold flex items-center space-x-1.5 shadow";
+                if (icon) icon.innerText = "⚠️";
+                if (text) text.innerText = "Sync error – please try again";
+                if (modalStatus) {
+                    modalStatus.className = "text-rose-300 font-bold";
+                    modalStatus.innerText = `Status: Sync error – please try again`;
+                }
+            }
+        }
+
+        function initDefaultData() {
+            window.appData = {};
+            for (let g = 1; g <= 6; g++) {
+                window.appData[`grade_${g}`] = [];
+                for (let s = 1; s <= 10; s++) {
+                    window.appData[`grade_${g}`].push({
+                        id: s,
+                        name: `Student ${s}`,
+                        points: 0
+                    });
+                }
+            }
+        }
+
+        function updateGradeBadges() {
+            let grandTotal = 0;
+            for (let g = 1; g <= 6; g++) {
+                const gradeList = (window.appData && window.appData[`grade_${g}`]) || [];
+                const totalPts = gradeList.reduce((sum, st) => sum + (Number(st.points) || 0), 0);
+                grandTotal += totalPts;
+                const badgeEl = document.getElementById(`g${g}-badge`);
+                if (badgeEl) {
+                    badgeEl.innerText = `${totalPts} total pts`;
+                }
+            }
+            const startSavedEl = document.getElementById('start-total-saved-label');
+            if (startSavedEl) {
+                startSavedEl.innerText = `🛡️ ${grandTotal} Total Saved Pts`;
+            }
+        }
+
+        function updateTotalGradePointsDisplay() {
+            if (!window.currentGrade) return;
+            const currentStudents = window.appData[`grade_${window.currentGrade}`] || [];
+            const totalPts = currentStudents.reduce((sum, st) => sum + (Number(st.points) || 0), 0);
+            const totalEl = document.getElementById('total-class-points');
+            if (totalEl) {
+                totalEl.innerText = `Total: ${totalPts} pts`;
+            }
+            const fishCountEl = document.getElementById('total-class-fish');
+            if (fishCountEl) {
+                fishCountEl.innerText = `${currentStudents.length} Fish`;
+            }
+        }
+
+        function playSound(type) {
+            if (!window.soundEnabled) return;
+            initAudio();
+            if (!audioCtx) return;
+
+            const now = audioCtx.currentTime;
+            if (type === 'add') {
+                const osc = audioCtx.createOscillator();
+                const gain = audioCtx.createGain();
+                osc.type = 'sine';
+                osc.frequency.setValueAtTime(523.25, now);
+                osc.frequency.exponentialRampToValueAtTime(880, now + 0.15);
+                gain.gain.setValueAtTime(0.3, now);
+                gain.gain.exponentialRampToValueAtTime(0.01, now + 0.2);
+                osc.connect(gain);
+                gain.connect(audioCtx.destination);
+                osc.start(now);
+                osc.stop(now + 0.2);
+            } else if (type === 'subtract') {
+                const osc = audioCtx.createOscillator();
+                const gain = audioCtx.createGain();
+                osc.type = 'triangle';
+                osc.frequency.setValueAtTime(320, now);
+                osc.frequency.exponentialRampToValueAtTime(180, now + 0.15);
+                gain.gain.setValueAtTime(0.3, now);
+                gain.gain.exponentialRampToValueAtTime(0.01, now + 0.2);
+                osc.connect(gain);
+                gain.connect(audioCtx.destination);
+                osc.start(now);
+                osc.stop(now + 0.2);
+            } else if (type === 'levelUp') {
+                const notes = [523.25, 659.25, 783.99, 1046.50];
+                notes.forEach((freq, idx) => {
+                    const osc = audioCtx.createOscillator();
+                    const gain = audioCtx.createGain();
+                    osc.type = 'sine';
+                    osc.frequency.value = freq;
+                    gain.gain.setValueAtTime(0.25, now + idx * 0.08);
+                    gain.gain.exponentialRampToValueAtTime(0.001, now + idx * 0.08 + 0.25);
+                    osc.connect(gain);
+                    gain.connect(audioCtx.destination);
+                    osc.start(now + idx * 0.08);
+                    osc.stop(now + idx * 0.08 + 0.25);
+                });
+            }
+        }
+
+        // Get strict Rainbow Tier Info for a given score
+        function getFishTierInfo(points) {
+            const pts = Math.max(0, points);
+            for (let i = RAINBOW_TIERS.length - 1; i >= 0; i--) {
+                if (pts >= RAINBOW_TIERS[i].min) {
+                    const tier = RAINBOW_TIERS[i];
+                    let dynamicScale = tier.scale;
+                    if (tier.isLegendary && pts > 100) {
+                        const extraPoints = pts - 100;
+                        dynamicScale = Math.min(4.5, Number((tier.scale + extraPoints * 0.015).toFixed(2)));
+                    }
+                    return { ...tier, scale: dynamicScale, tierIndex: i };
+                }
+            }
+            return { ...RAINBOW_TIERS[0], tierIndex: 0 };
+        }
+
+        // Dynamic SVG Generation for Fish with Rainbow progression
+        function generateFishSVG(student) {
+            const { points, name, id } = student;
+            const tier = getFishTierInfo(points);
+
+            let bodyFill = `fill="${tier.primary}"`;
+            let defsHTML = '';
+
+            if (tier.gradient) {
+                const gradId = `rainbow-grad-${id}`;
+                const stopsHTML = tier.gradient.map((col, idx) => 
+                    `<stop offset="${Math.round((idx / (tier.gradient.length - 1)) * 100)}%" stop-color="${col}"/>`
+                ).join('');
+
+                defsHTML = `
+                    <defs>
+                        <linearGradient id="${gradId}" x1="0%" y1="0%" x2="100%" y2="100%">
+                            ${stopsHTML}
+                        </linearGradient>
+                    </defs>
+                `;
+                bodyFill = `fill="url(#${gradId})"`;
+            }
+
+            let crownHTML = '';
+            if (tier.isLegendary) {
+                crownHTML = `
+                    <g transform="translate(68, -14) scale(0.7)">
+                        <polygon points="0,15 5,0 12,8 19,0 24,15" fill="#ffd700" stroke="#b8860b" stroke-width="1.5"/>
+                        <circle cx="5" cy="0" r="2.5" fill="#ff0055"/>
+                        <circle cx="12" cy="8" r="2.5" fill="#00ffff"/>
+                        <circle cx="19" cy="0" r="2.5" fill="#ff0055"/>
+                    </g>
+                `;
+            }
+
+            const width = Math.round(120 * tier.scale);
+            const height = Math.round(80 * tier.scale);
+            const isSelected = (window.selectedStudentId === id);
+
+            // Scale fish dimensions gracefully on compact iPhone screens while preserving relative tier growth
+            const screenFactor = window.innerWidth < 480 ? 0.68 : (window.innerWidth < 768 ? 0.85 : 1);
+            const responsiveWidth = Math.round(width * screenFactor);
+            const responsiveHeight = Math.round(height * screenFactor);
+
+            return `
+                <div onclick="window.onFishClicked(${id})" class="fish-wrapper ${isSelected ? 'selected-fish' : ''} ${tier.isLegendary ? 'legendary-rainbow-aura' : ''}" style="width: ${responsiveWidth}px; height: ${responsiveHeight}px; min-width: 52px; min-height: 40px;" data-student-id="${id}">
+                    <div class="fish-body-container relative w-full h-full">
+                        <svg viewBox="0 0 120 75" class="fish-svg w-full h-full drop-shadow-xl transition-transform duration-150">
+                            ${defsHTML}
+
+                            <!-- Top Fin -->
+                            <path d="M 45 12 Q 60 -10 75 12" fill="${tier.secondary}" opacity="0.9" />
+                            <!-- Bottom Fin -->
+                            <path d="M 50 48 Q 65 68 75 48" fill="${tier.secondary}" opacity="0.9" />
+
+                            <!-- Tail Fin -->
+                            <path d="M 20 37.5 L 0 15 Q 10 37.5 0 60 Z" fill="${tier.secondary}">
+                                <animateTransform attributeName="transform" type="rotate" values="0 20 37.5; 12 20 37.5; 0 20 37.5; -12 20 37.5; 0 20 37.5" dur="${0.5 + (id % 3) * 0.1}s" repeatCount="indefinite"/>
+                            </path>
+
+                            <!-- Main Body -->
+                            <ellipse cx="60" cy="37.5" rx="42" ry="25" ${bodyFill} stroke="${tier.secondary}" stroke-width="2.5"/>
+
+                            <!-- Side Pectoral Fin -->
+                            <path d="M 65 40 Q 50 50 55 35 Z" fill="${tier.secondary}" opacity="0.9"/>
+
+                            <!-- Eye -->
+                            <circle cx="85" cy="30" r="7" fill="white"/>
+                            <circle cx="87" cy="30" r="4" fill="#1e293b"/>
+                            <circle cx="88.5" cy="28.5" r="1.5" fill="white"/>
+
+                            <!-- Cute Smile -->
+                            <path d="M 90 38 Q 87 44 83 40" stroke="#1e293b" stroke-width="2" stroke-linecap="round" fill="none"/>
+
+                            ${crownHTML}
+                        </svg>
+
+                        <!-- Student Badge (Always Left-to-Right, Name & Number Only) -->
+                        <div class="absolute -bottom-5 sm:-bottom-6 left-1/2 transform -translate-x-1/2 bg-black/75 text-white text-[10px] sm:text-xs px-2 sm:px-2.5 py-0.5 rounded-full whitespace-nowrap font-bold border border-yellow-300/50 shadow-md flex items-center space-x-1 sm:space-x-1.5 pointer-events-none">
+                            <span class="text-white">${escapeHTML(name)}</span>
+                            <span class="text-yellow-300 font-black">${points}</span>
+                        </div>
+                    </div>
+                </div>
+            `;
+        }
+
+        function escapeHTML(str) {
+            return str.replace(/[&<>'"]/g, 
+                tag => ({ '&': '&amp;', '<': '&lt;', '>': '&gt;', "'": '&#39;', '"': '&quot;' }[tag] || tag)
+            );
+        }
+
+        // Physics & Swimming Loop
+        function initFishPhysics() {
+            const container = document.getElementById('fish-tank-area');
+            if (!container) return;
+            container.innerHTML = '';
+            fishStateList = [];
+
+            const currentStudents = window.appData[`grade_${window.currentGrade}`] || [];
+            const tankWidth = container.clientWidth || window.innerWidth;
+            const tankHeight = container.clientHeight || 500;
+
+            currentStudents.forEach((student) => {
+                const fishHTML = generateFishSVG(student);
+                const tempDiv = document.createElement('div');
+                tempDiv.innerHTML = fishHTML.trim();
+                const fishEl = tempDiv.firstChild;
+                container.appendChild(fishEl);
+
+                const posX = Math.random() * (tankWidth - 160) + 30;
+                const posY = Math.random() * (tankHeight - 140) + 40;
+                const vx = (Math.random() > 0.5 ? 1 : -1) * (0.6 + Math.random() * 0.8);
+                const vy = (Math.random() - 0.5) * 0.4;
+
+                fishStateList.push({
+                    id: student.id,
+                    element: fishEl,
+                    x: posX,
+                    y: posY,
+                    vx: vx,
+                    vy: vy,
+                    facingRight: vx > 0,
+                    changeDirTimer: Math.random() * 200 + 100
+                });
+            });
+
+            if (animationFrameId) cancelAnimationFrame(animationFrameId);
+            animateAquarium();
+        }
+
+        function animateAquarium() {
+            const container = document.getElementById('fish-tank-area');
+            if (!container) return;
+
+            const tankWidth = container.clientWidth || window.innerWidth;
+            const tankHeight = container.clientHeight || 500;
+            const isMobile = tankWidth < 640;
+            const rightMargin = isMobile ? 85 : 140;
+            const bottomMargin = isMobile ? 75 : 110;
+            const topMargin = isMobile ? 56 : 45;
+
+            fishStateList.forEach((fish) => {
+                if (window.selectedStudentId === fish.id) {
+                    fish.vy = Math.sin(Date.now() / 300) * 0.2;
+                } else {
+                    fish.x += fish.vx;
+                    fish.y += fish.vy;
+
+                    fish.vy += (Math.random() - 0.5) * 0.04;
+                    fish.vy = Math.max(-0.7, Math.min(0.7, fish.vy));
+
+                    if (fish.x > tankWidth - rightMargin) {
+                        fish.vx = -Math.abs(fish.vx);
+                        fish.facingRight = false;
+                    } else if (fish.x < 10) {
+                        fish.vx = Math.abs(fish.vx);
+                        fish.facingRight = true;
+                    }
+
+                    if (fish.y > tankHeight - bottomMargin) {
+                        fish.vy = -0.4;
+                    } else if (fish.y < topMargin) {
+                        fish.vy = 0.4;
+                    }
+
+                    fish.changeDirTimer--;
+                    if (fish.changeDirTimer <= 0) {
+                        fish.changeDirTimer = Math.random() * 300 + 150;
+                        if (Math.random() < 0.25) {
+                            fish.vx *= -1;
+                            fish.facingRight = fish.vx > 0;
+                        }
+                    }
+                }
+                const flip = fish.facingRight ? 'scaleX(1)' : 'scaleX(-1)';
+                fish.element.style.transform = `translate3d(${fish.x}px, ${fish.y}px, 0)`;
+                const svgEl = fish.element.querySelector('.fish-svg');
+                if (svgEl) svgEl.style.transform = flip;
+            });
+
+            animationFrameId = requestAnimationFrame(animateAquarium);
+        }
+
+        function refreshSingleFish(studentId) {
+            const student = window.appData[`grade_${window.currentGrade}`].find(s => s.id === studentId);
+            const fishObj = fishStateList.find(f => f.id === studentId);
+            if (!student || !fishObj) return;
+
+            const newHTML = generateFishSVG(student);
+            const temp = document.createElement('div');
+            temp.innerHTML = newHTML.trim();
+            const newEl = temp.firstChild;
+
+            const flip = fishObj.facingRight ? 'scaleX(1)' : 'scaleX(-1)';
+            newEl.style.transform = `translate3d(${fishObj.x}px, ${fishObj.y}px, 0)`;
+            const svgEl = newEl.querySelector('.fish-svg');
+            if (svgEl) svgEl.style.transform = flip;
+
+            fishObj.element.replaceWith(newEl);
+            fishObj.element = newEl;
+        }
+
+        // Direct Fish Selection & Popup Modal Handlers
+        window.onFishClicked = function(studentId) {
+            window.selectedStudentId = studentId;
+            const currentStudents = window.appData[`grade_${window.currentGrade}`] || [];
+            const student = currentStudents.find(s => s.id === studentId);
+            if (!student) return;
+
+            fishStateList.forEach(f => {
+                if (f.id === studentId) {
+                    f.element.classList.add('selected-fish');
+                } else {
+                    f.element.classList.remove('selected-fish');
+                }
+            });
+
+            window.syncPopupValues();
+
+            const nameInput = document.getElementById('popup-student-name-input');
+            nameInput.value = student.name;
+
+            nameInput.oninput = function() {
+                const typedVal = nameInput.value;
+                student.name = typedVal.trim() || `Student ${student.id}`;
+                refreshSingleFish(student.id);
+
+                clearTimeout(nameSaveTimeout);
+                nameSaveTimeout = setTimeout(() => {
+                    pushDataToCloud();
+                }, 350);
+            };
+
+            nameInput.onkeydown = function(e) {
+                if (e.key === 'Enter') {
+                    nameInput.blur();
+                }
+            };
+            nameInput.onblur = function() {
+                clearTimeout(nameSaveTimeout);
+                student.name = nameInput.value.trim() || `Student ${student.id}`;
+                nameInput.value = student.name;
+                refreshSingleFish(student.id);
+                pushDataToCloud();
+            };
+
+            document.getElementById('fish-popup-modal').classList.remove('hidden');
+            setTimeout(() => {
+                nameInput.focus();
+            }, 50);
+        };
+
+        window.syncPopupValues = function() {
+            if (window.selectedStudentId === null || !window.currentGrade) return;
+            const currentStudents = window.appData[`grade_${window.currentGrade}`] || [];
+            const student = currentStudents.find(s => s.id === window.selectedStudentId);
+            if (!student) return;
+
+            const tier = getFishTierInfo(student.points);
+
+            const nameInput = document.getElementById('popup-student-name-input');
+            if (document.activeElement !== nameInput) {
+                nameInput.value = student.name;
+            }
+            document.getElementById('popup-student-points').innerText = student.points;
+            
+            const badge = document.getElementById('popup-tier-badge');
+            badge.innerText = `${tier.name} • Scale x${tier.scale.toFixed(2)}`;
+            badge.style.color = tier.primary;
+        };
+
+        window.closeFishPopupModal = function() {
+            document.getElementById('fish-popup-modal').classList.add('hidden');
+            if (window.selectedStudentId !== null) {
+                const prevId = window.selectedStudentId;
+                window.selectedStudentId = null;
+                refreshSingleFish(prevId);
+            }
+        };
+
+        window.changePopupPoints = function(delta, event) {
+            if (window.selectedStudentId === null) return;
+            const student = window.appData[`grade_${window.currentGrade}`].find(s => s.id === window.selectedStudentId);
+            if (!student) return;
+
+            const oldTier = getFishTierInfo(student.points);
+            student.points = Math.max(0, student.points + delta);
+            const newTier = getFishTierInfo(student.points);
+
+            if (delta > 0) {
+                if (newTier.tierIndex > oldTier.tierIndex) {
+                    playSound('levelUp');
+                } else {
+                    playSound('add');
+                }
+            } else if (delta < 0) {
+                playSound('subtract');
+            }
+
+            if (event) {
+                const particle = document.createElement('div');
+                particle.className = 'score-particle';
+                particle.innerText = delta > 0 ? `+${delta}` : `${delta}`;
+                particle.style.color = delta > 0 ? '#4ade80' : '#f87171';
+                const posX = (event.clientX && event.clientX > 0) ? event.clientX : window.innerWidth / 2;
+                const posY = (event.clientY && event.clientY > 0) ? event.clientY : window.innerHeight / 2;
+                particle.style.left = `${posX - 15}px`;
+                particle.style.top = `${posY - 20}px`;
+                document.body.appendChild(particle);
+                setTimeout(() => particle.remove(), 1200);
+            }
+
+            pushDataToCloud();
+            window.syncPopupValues();
+            updateTotalGradePointsDisplay();
+            refreshSingleFish(student.id);
+        };
+
+        window.resetSingleStudentPopupPoints = function() {
+            if (window.selectedStudentId === null) return;
+            const student = window.appData[`grade_${window.currentGrade}`].find(s => s.id === window.selectedStudentId);
+            if (!student) return;
+
+            openConfirmDialog(
+                'Reset Student Points?',
+                `Are you sure you want to reset ${student.name}'s points back to 0?`,
+                () => {
+                    student.points = 0;
+                    playSound('subtract');
+                    pushDataToCloud();
+                    window.syncPopupValues();
+                    updateTotalGradePointsDisplay();
+                    refreshSingleFish(student.id);
+                    window.showToast(`${student.name}'s points reset to 0`, '🔄');
+                }
+            );
+        };
+
+        window.deleteSelectedFishFromPopup = function() {
+            if (window.selectedStudentId === null || !window.currentGrade) return;
+            const list = window.appData[`grade_${window.currentGrade}`];
+            if (list.length <= 1) {
+                window.showToast('At least 1 fish must stay in the tank!', '⚠️');
+                return;
+            }
+            const targetId = window.selectedStudentId;
+            const student = list.find(s => s.id === targetId);
+            if (!student) return;
+
+            openConfirmDialog(
+                'Remove Student Fish?',
+                `Are you sure you want to remove ${student.name} (${student.points} pts) from Grade ${window.currentGrade}?`,
+                () => {
+                    window.appData[`grade_${window.currentGrade}`] = list.filter(s => s.id !== targetId);
+                    window.closeFishPopupModal();
+                    playSound('subtract');
+                    pushDataToCloud();
+                    updateTotalGradePointsDisplay();
+                    initFishPhysics();
+                    window.showToast(`Removed ${student.name}`, '🗑️');
+                }
+            );
+        };
+
+        // Add a new student fish to the active grade tank
+        window.addFishToCurrentGrade = function() {
+            if (!window.currentGrade) return;
+            const list = window.appData[`grade_${window.currentGrade}`];
+            if (list.length >= 40) {
+                window.showToast('Maximum 40 fish per grade tank!', '🐠');
+                return;
+            }
+            const maxId = list.reduce((max, s) => Math.max(max, s.id), 0);
+            const newId = maxId + 1;
+            const newStudent = {
+                id: newId,
+                name: `Student ${list.length + 1}`,
+                points: 0
+            };
+            list.push(newStudent);
+            playSound('add');
+            pushDataToCloud();
+            updateTotalGradePointsDisplay();
+            initFishPhysics();
+            window.showToast(`Added ${newStudent.name}!`, '🐠');
+        };
+
+        // Remove the last student fish from the active grade tank (with confirmation)
+        window.removeLastFishFromCurrentGrade = function() {
+            if (!window.currentGrade) return;
+            const list = window.appData[`grade_${window.currentGrade}`];
+            if (list.length <= 1) {
+                window.showToast('At least 1 fish must stay in the tank!', '⚠️');
+                return;
+            }
+            const lastStudent = list[list.length - 1];
+            openConfirmDialog(
+                'Remove Last Fish?',
+                `Are you sure you want to remove ${lastStudent.name} (${lastStudent.points} pts) from Grade ${window.currentGrade}?`,
+                () => {
+                    const removed = list.pop();
+                    if (window.selectedStudentId === removed.id) {
+                        window.closeFishPopupModal();
+                    }
+                    playSound('subtract');
+                    pushDataToCloud();
+                    updateTotalGradePointsDisplay();
+                    initFishPhysics();
+                    window.showToast(`Removed ${removed.name}`, '🗑️');
+                }
+            );
+        };
+
+        window.initAudio = function() {
+            if (!audioCtx) {
+                const AudioContextClass = window.AudioContext || window.webkitAudioContext;
+                if (AudioContextClass) {
+                    audioCtx = new AudioContextClass();
+                }
+            }
+            if (audioCtx && audioCtx.state === 'suspended') {
+                audioCtx.resume();
+            }
+        };
+
+        window.showToast = function(message, icon = '🐠') {
+            const toast = document.createElement('div');
+            toast.className = 'fixed bottom-6 left-1/2 transform -translate-x-1/2 z-50 bg-slate-900/95 text-white border-2 border-cyan-400 px-4 py-2 rounded-full shadow-2xl font-bold text-sm flex items-center space-x-2 transition-opacity duration-300';
+            toast.innerHTML = `<span>${icon}</span><span>${escapeHTML(message)}</span>`;
+            document.body.appendChild(toast);
+            setTimeout(() => {
+                toast.style.opacity = '0';
+                setTimeout(() => toast.remove(), 300);
+            }, 2200);
+        };
+
+        // Screen Navigation: Play Start Screen -> Grade Selection -> Grade Aquarium
+        window.enterClassroomPlay = function() {
+            initAudio();
+            playSound('levelUp');
+            window.showHomeScreen();
+        };
+
+        // Unlock iOS/iPad Safari Web Audio on first touch anywhere
+        document.addEventListener('touchstart', () => {
+            initAudio();
+        }, { once: true, passive: true });
+
+        window.showStartScreen = function() {
+            window.closeFishPopupModal();
+            window.currentGrade = null;
+            document.getElementById('start-screen').classList.remove('hidden');
+            document.getElementById('home-screen').classList.add('hidden');
+            document.getElementById('grade-screen').classList.add('hidden');
+
+            document.getElementById('home-btn').classList.add('hidden');
+            document.getElementById('reset-grade-btn').classList.add('hidden');
+            if (animationFrameId) cancelAnimationFrame(animationFrameId);
+            updateGradeBadges();
+        };
+
+        window.selectGrade = function(gradeNumber) {
+            window.currentGrade = gradeNumber;
+            window.selectedStudentId = null;
+
+            document.getElementById('start-screen').classList.add('hidden');
+            document.getElementById('home-screen').classList.add('hidden');
+            document.getElementById('grade-screen').classList.remove('hidden');
+
+            document.getElementById('home-btn').classList.remove('hidden');
+            document.getElementById('reset-grade-btn').classList.remove('hidden');
+
+            document.getElementById('current-grade-title').innerText = `Grade ${gradeNumber} Tank`;
+            updateTotalGradePointsDisplay();
+            initFishPhysics();
+        };
+
+        window.showHomeScreen = function() {
+            window.closeFishPopupModal();
+            window.currentGrade = null;
+            document.getElementById('start-screen').classList.add('hidden');
+            document.getElementById('home-screen').classList.remove('hidden');
+            document.getElementById('grade-screen').classList.add('hidden');
+
+            document.getElementById('home-btn').classList.add('hidden');
+            document.getElementById('reset-grade-btn').classList.add('hidden');
+            if (animationFrameId) cancelAnimationFrame(animationFrameId);
+            updateGradeBadges();
+        };
+
+        function openConfirmDialog(title, message, onConfirm) {
+            document.getElementById('reset-modal-title').innerText = title;
+            document.getElementById('reset-modal-text').innerText = message;
+            pendingConfirmAction = onConfirm;
+            document.getElementById('reset-modal').classList.remove('hidden');
+        }
+
+        window.openResetModal = function() {
+            openConfirmDialog(
+                'Reset Grade Points?',
+                `Are you sure you want to reset all points for Grade ${window.currentGrade} to 0? Student names will remain saved.`,
+                () => {
+                    if (window.currentGrade) {
+                        window.appData[`grade_${window.currentGrade}`].forEach(student => {
+                            student.points = 0;
+                        });
+                        pushDataToCloud();
+                        updateTotalGradePointsDisplay();
+                        initFishPhysics();
+                        playSound('subtract');
+                        window.showToast(`Grade ${window.currentGrade} points reset to 0`, '🔄');
+                    }
+                }
+            );
+        };
+
+        window.closeResetModal = function() {
+            pendingConfirmAction = null;
+            document.getElementById('reset-modal').classList.add('hidden');
+        };
+
+        window.confirmResetGradePoints = function() {
+            const action = pendingConfirmAction;
+            window.closeResetModal();
+            if (typeof action === 'function') {
+                action();
+            }
+        };
+
+        window.exportBackupJSON = function() {
+            const exportPayload = {
+                appName: "Teacher Rosy's Fishy Points",
+                exportedAt: new Date().toISOString(),
+                classroomId: classroomId,
+                gradesData: window.appData
+            };
+            const dataStr = "data:text/json;charset=utf-8," + encodeURIComponent(JSON.stringify(exportPayload, null, 2));
+            const downloadAnchor = document.createElement('a');
+            downloadAnchor.setAttribute("href", dataStr);
+            downloadAnchor.setAttribute("download", `Teacher_Rosy_Fishy_Points_Backup_${new Date().toISOString().slice(0,10)}.json`);
+            document.body.appendChild(downloadAnchor);
+            downloadAnchor.click();
+            downloadAnchor.remove();
+            window.showToast('JSON Backup Downloaded!', '📥');
+        };
+
+        window.importBackupJSON = function(event) {
+            const file = event.target.files[0];
+            if (!file) return;
+
+            const reader = new FileReader();
+            reader.onload = function(e) {
+                try {
+                    const parsed = JSON.parse(e.target.result);
+                    const restoredGrades = (parsed && parsed.gradesData && parsed.gradesData.grade_1)
+                        ? parsed.gradesData
+                        : (parsed && parsed.grade_1 ? parsed : null);
+
+                    if (isValidClassroomData(restoredGrades)) {
+                        openConfirmDialog(
+                            'Restore Backup File?',
+                            'Restoring this backup will update all 6 grades with the scores and names inside the JSON file. Continue?',
+                            async () => {
+                                window.appData = restoredGrades;
+                                await pushDataToCloud();
+                                if (window.currentGrade) {
+                                    updateTotalGradePointsDisplay();
+                                    initFishPhysics();
+                                }
+                                window.showToast("Backup restored & synced!", "✅");
+                            }
+                        );
+                    } else {
+                        window.showToast("Invalid backup file format.", "⚠️");
+                    }
+                } catch(err) {
+                    window.showToast("Error reading JSON backup file.", "❌");
+                } finally {
+                    event.target.value = '';
+                }
+            };
+            reader.readAsText(file);
+        };
+
+        window.openSyncModal = function() {
+            const input = document.getElementById('classroom-id-input');
+            input.value = classroomId;
+            document.getElementById('sync-modal').classList.remove('hidden');
+        };
+
+        window.closeSyncModal = function() {
+            document.getElementById('sync-modal').classList.add('hidden');
+        };
+
+        window.setCustomClassroomId = async function() {
+            const input = document.getElementById('classroom-id-input');
+            const newId = input.value.trim().toLowerCase().replace(/[^a-z0-9_-]/g, '');
+            if (newId) {
+                classroomId = newId;
+                localStorage.setItem('teacher_rosy_classroom_id', classroomId);
+                hasUnsyncedChanges = false;
+                await setupCloudSnapshotListener();
+                window.closeSyncModal();
+                window.showToast(`Connected to Classroom: ${classroomId}`, '☁️');
+            }
+        };
+
+        window.toggleSound = function() {
+            window.soundEnabled = !window.soundEnabled;
+            document.getElementById('sound-icon').innerText = window.soundEnabled ? '🔊' : '🔇';
+        };
+
+        function createBackgroundBubbles() {
+            const containers = [
+                document.getElementById('fish-tank-area'),
+                document.getElementById('start-screen')
+            ];
+            containers.forEach(tank => {
+                if (!tank) return;
+                for (let i = 0; i < 12; i++) {
+                    const bubble = document.createElement('div');
+                    bubble.className = 'bg-bubble';
+                    const size = Math.random() * 18 + 8;
+                    bubble.style.width = `${size}px`;
+                    bubble.style.height = `${size}px`;
+                    bubble.style.left = `${Math.random() * 100}%`;
+                    bubble.style.animationDuration = `${Math.random() * 6 + 5}s`;
+                    bubble.style.animationDelay = `${Math.random() * 5}s`;
+                    tank.appendChild(bubble);
+                }
+            });
+        }
+
+        window.addEventListener('DOMContentLoaded', async () => {
+            await loadProtectedLocalData();
+            createBackgroundBubbles();
+            await initCloudFirebase();
+        });
+
+        window.addEventListener('resize', () => {
+            if (window.currentGrade) {
+                initFishPhysics();
+            }
+        });
+
+        window.addEventListener('orientationchange', () => {
+            setTimeout(() => {
+                if (window.currentGrade) {
+                    initFishPhysics();
+                }
+            }, 200);
+        });
+    </script>
+</body>
+</html>
